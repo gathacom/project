@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header class=" py-5">
+    <header class="py-5 bg-light">
         <nav class="nav navbar-expand-lg fixed-top p-4 navbar-light d-flex align-items-center
             justify-content-center text-secondary">
             <div class="container-fluid">
@@ -39,7 +39,7 @@
         </nav>
     </header>
 
-    <section class="home-bg">
+    <section class="home-bg bg-dark">
         <div class="container py-5 px-2">
             <div class="row gx-3 d-flex align-items-center justify-content-center">
                 <div class="col-6 col-lg-5 col-xl-5 col-xxl-4 ">
