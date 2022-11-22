@@ -1,3 +1,9 @@
+*{
+    margin : 0;
+    padding : 0;
+    scroll-behavior: smooth;
+}
+
 .masthead{
     padding-top: 10rem;
     padding-bottom: calc(10rem - 4.5rem);
@@ -8,6 +14,23 @@
     background-position : center;
     background-attachment: scroll;
 }
+
+nav{
+    position : fixed;
+}
+
+.nav-bg{
+    background-color: #61481C;
+    background-color: #
+    height : 7%;
+}
+
+.home-bg{
+    width : 100%;
+    height : 100%;
+    background-color: #61481C;
+}
+
 .divider{
     height: 0.5rem;
     max-width: 20rem;
@@ -38,7 +61,6 @@
 }
 .nav-link:hover::after {
     content : '';
-    display: block;
     border-bottom : 4px solid rgb(255, 196, 0);
     width : 60%;
     margin : auto;
