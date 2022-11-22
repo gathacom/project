@@ -77,8 +77,8 @@
     <section class="bg-light">
         <div class="">
             <div class="row ">
-                <div class="col-md-3 bg-warning ">
-                    <div class="container mx-5">
+                <div class="col-md-3 bg-warning container-category  ">
+                    <div class="container mx-5 category ">
                         <h3>Categories</h3>
                         <ul>
                             <li><a href="#list-coffee">Coffee</a></li>

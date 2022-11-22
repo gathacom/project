@@ -121,3 +121,13 @@ nav{
     width: 50%;
 
 }
+
+.category{
+    position: absolute;
+    left : 0;
+    top : 0;
+}
+
+.container-category{
+    position : relative;
+}
