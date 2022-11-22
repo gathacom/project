@@ -37,6 +37,9 @@
                 </div>
             </div>
         </nav>
+    </header>
+
+    <section class="home-bg">
         <div class="container py-5 px-2">
             <div class="row gx-3 d-flex align-items-center justify-content-center">
                 <div class="col-6 col-lg-5 col-xl-5 col-xxl-4 ">
@@ -54,7 +57,8 @@
                 </div>
             </div>
         </div>
-    </header>
+    </section>
+
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
