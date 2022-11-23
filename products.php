@@ -29,7 +29,7 @@
 
 <body class="home-bg">
     <header class="bg-dark py-5">
-        <nav class="nav navbar-expand-lg sticky-top p-5   navbar-dark">
+        <nav class="nav navbar-expand-lg sticky-top navbar-dark">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle"
                     aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation"><span

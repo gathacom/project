@@ -123,9 +123,9 @@ nav{
 }
 
 .category{
-    position: absolute;
+    position: sticky;
     left : 0;
-    top : 0;
+    top : 2em;
 }
 
 .container-category{
