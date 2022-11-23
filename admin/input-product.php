@@ -108,11 +108,20 @@
                         <ul>
                             <li>
                                 <div class="product">
-                                    <img src="../assets/product-1.png" alt="">
-                                    <div class="description">
-                                        <h3>Biji Kopi House Blend ETC 50% Robusta 50% Arabica</h3>
-                                        <h5> Rp50.000 - Rp100.000</h5>
+                                    <?php
+                                        $sql_product = "SELECT * FROM product";
+                                        $query_product = mysqli_query($connect, $sql_product) or die(mysqli_error($connect));
+                                        while($list_product = mysqli_fetch_array($query_product)){
+                                    ?>
+                                    <div>
+                                    <img src="gambar-product/<?php echo $list_product['gambar']; ?>">
                                     </div>
+                                    <div class="description">
+                                        <h3><?php echo $list_product['nama_product']; ?></h3>
+                                        <h5> <?php echo $list_product['harga']; ?></h5>
+                                        <h5> <?php echo $list_product['jumlah_tersedia']; ?></h5>
+                                    </div>
+                                    <?php } ?>
                                 </div>
                             </li>
                         </ul>
@@ -165,7 +174,7 @@
                                 </div>
                             </div>
                             <div class="input">
-                                <input type="submit" name="submit" class="btn btn-warning" value="Tambah" data-dismiss="modal">
+                                <input type="submit" class="btn btn-warning" value="Tambah">
                                 <input type="button" class="btn btn-warning" value="Close" data-dismiss="modal">
                             </div>
 
