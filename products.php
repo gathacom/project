@@ -28,34 +28,34 @@
 </head>
 
 <body class="home-bg">
-    <header class="bg-dark py-5">
-        <nav class="nav navbar-expand-lg sticky-top navbar-dark">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle"
-                    aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link" aria-current="page">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link" aria-current="page">PROFILE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="products.php" class="nav-link" aria-current="page">PRODUCTS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link" aria-current="page">CONTACT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link" aria-current="page">ORDER</a>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="nav nav-bg navbar-expand-lg sticky-top navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle"
+                aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" aria-current="page">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" aria-current="page">PROFILE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.php" class="nav-link" aria-current="page">PRODUCTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" aria-current="page">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" aria-current="page">ORDER</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <div class="container px-2">
+        </div>
+    </nav>
+    <section class="bg-dark py-5 position-relative">
+        <div class="container px-2 ">
             <div class="row gx-3 d-flex align-items-center justify-content-center">
                 <div class="col-6 col-lg-5 col-xl-5 col-xxl-4 ">
                     <div class="my-5 text-warning text-center text-xl-start">
@@ -72,14 +72,19 @@
                 </div>
             </div>
         </div>
-    </header>
-
-    <section class="bg-light">
+        <div class="custom-shape-divider-bottom-1669189821">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <section class="bg-light" id="home1">
         <div class="">
             <div class="row ">
                 <div class="col-md-3 bg-warning container-category  ">
                     <div class="container mx-5 category ">
-                        <h3>Categories</h3>
+                        <h2 class="mb-3">Categories</h2>
                         <ul>
                             <li><a href="#list-coffee">Coffee</a></li>
                             <li><a href="#list-tea">Tea</a></li>
