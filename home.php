@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="nav nav-bg navbar-expand-lg sticky-top navbar-dark">
+    <nav class="nav nav-bg navbar-expand-lg sticky-top navbar-dark p-3">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle"
                 aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link" aria-current="page">HOME</a>
+                        <a href="home.php" class="nav-link" aria-current="page">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a href="#home" class="nav-link" aria-current="page">PROFILE</a>
@@ -42,25 +42,40 @@
             </div>
         </div>
     </nav>
-
-    <section class="bg-dark">
-        <div class="container py-5 px-2">
+    <section class="bg-dark py-5 position-relative" id="section1">
+        <div class="container px-2">
             <div class="row gx-3 d-flex align-items-center justify-content-center">
-                <div class="col-6 col-lg-5 col-xl-5 col-xxl-4 ">
+                <div class="col-6 col-lg-5 col-xl-5 col-xxl-4">
                     <div class="my-5 text-warning text-center text-xl-start">
                         <h1 class="display-2 fw-bolder mb-2">Enjoy Your Coffee</h1>
-                        <h5 class="lead fw-normal mb-4">Feel Your Day Full of Magic</h5>
-                        <button class="button-profile"><a class="btn" href="#profile">Our Profile</a></button>
+                        <h5 class="lead fw-normal mb-4">Silahkan Login Untuk Mengakses Website</h5>
+                        <a class="btn" href="login.php"> <button class="button-profile">LOGIN</button> </a>
                     </div>
                 </div>
                 <div class="col-6 col-xl-4 col-xxl-5 text-center">
-                    <div>
-                        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_wyopauto.json"
-                            background="transparent" speed="1" loop autoplay></lottie-player>
+                    <div class="lottie-product">
+                        <div>
+                            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_wyopauto.json"
+                                background="transparent" speed="1" loop autoplay></lottie-player>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="bg-dark py-5 position-relative">
+        <div class="container px-2" id="landing">
+            <div class="row gx-3 d-flex align-items-center justify-content-center">
+                <div class="col-6 col-lg-5 col-xl-5 col-xxl-4 ">
+                    <div class="my-5 text-warning text-center text-xl-start">
+
+                    </div>
+                </div>
+                <div class="col-6 col-xl-4 col-xxl-5 text-center">
+                    < </div>
+                </div>
+            </div>
     </section>
 
 
