@@ -17,19 +17,15 @@
 
 nav{
     position : fixed;
-    height : 20%;
 }
 
 bg-dark{
     height: 100vh;
-}
-
-.home-bg{
-    width : 100%;
-}   
+    width: 100%;
+} 
 
 .nav-bg{
-    background-color: #292b2c;
+    background-color: #212529;
 }
 
 .divider{
@@ -113,7 +109,7 @@ bg-dark{
     right: -5px;
     bottom: -5px;
     z-index: -1;
-    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background: linear-gradient(90deg,#00d0ff,#f441a5,#ffeb3b,#03a9f4);
     background-size: 400%;
     border-radius: 35px;
     transition: 1s;
@@ -143,33 +139,62 @@ bg-dark{
 .custom-shape-divider-bottom-1669189821 svg {
     position: relative;
     display: block;
-    width: calc(117% + 1.3px);
+    width: calc(127% + 1.3px);
     height: 163px;
 }
 
 .custom-shape-divider-bottom-1669189821 .shape-fill {
-    fill: #F0AD4E;
+    fill: #ffc107;
+}
+
+.row{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
 }
 
 .category{
+    font-size: 1.1em;
     position: sticky;
     left : 0;
-    top : 4em;
+    top : 6em;
 }
 
 .container-category{
     position : relative;
-    font-size: 1,8 em;
+    background-color: #ffc107;
 }
 
 .row .container-category .category ul li{
-    margin-bottom : 6px;
+    margin-bottom : .5em;
 }
 
 .row .container-category .category ul li a{
     text-decoration: none;
     color : black;
+    display : inline-block;
+    position: relative;}
 
+.row .container-category .category ul li a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    height: 2px;
+    margin: -3px 0;
+    left: 0;
+    background-color: black;
+    transition: all 0.4s ease-in 0s;
+}
+.row .container-category .category ul li a:hover:after {
+    width: 100%;
+}
+#landing{
+    height: auto;
+}
+
+#home1{
+    background-color: #ffc107;
 }
 
 #list-coffee ul, #list-tea ul, #list-food ul{

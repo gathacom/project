@@ -8,38 +8,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Gustoro Coffee Shop</title>
 </head>
 
 <body>
-    <header class="py-5 bg-light">
-        <nav class="nav navbar-expand-lg fixed-top p-4 navbar-light d-flex align-items-center
-            justify-content-center text-secondary">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle"
-                    aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link" aria-current="page">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link" aria-current="page">PROFILE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link" aria-current="page">CONTACT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link" aria-current="page">ORDER</a>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="nav nav-bg navbar-expand-lg sticky-top navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle"
+                aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" aria-current="page">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" aria-current="page">PROFILE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.php" class="nav-link" aria-current="page">PRODUCTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" aria-current="page">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" aria-current="page">ORDER</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <section class="home-bg bg-dark">
+    <section class="bg-dark" id="landing">
         <div class="container py-5 px-2">
             <div class="row gx-3 d-flex align-items-center justify-content-center">
                 <div class="col-6 col-lg-5 col-xl-5 col-xxl-4 ">
