@@ -12,21 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Gustoro Coffee Shop</title>
-
-    <style>
-    .product img {
-        width: 300px;
-    }
-
-    .product .description {
-        margin-left: 20px;
-    }
-
-    .product {
-        padding: 10px;
-        display: flex;
-    }
-    </style>
 </head>
 
 <body>
@@ -101,7 +86,9 @@
                         while(){
                         <li>
                             <div class="product">
-                                <img src="assets/product-1.png" alt="" />
+                                <div class="container-image  img-hover-zoom--blur">
+                                    <img src="assets/product-1.png" alt="" />
+                                </div>
                                 <div class="description">
                                     <h3>Biji Kopi House Blend ETC 50% Robusta 50% Arabica</h3>
                                     <h5>Rp50.000 - Rp100.000</h5>
@@ -110,12 +97,14 @@
                         </li>
                     </ul>
                 </div>
-                <div id="list-tea" class="pt-5">
+                <div id="list-tea" class="pt-5 ">
                     <ul>
                         while(){
                         <li>
                             <div class="product">
-                                <img src="assets/product-1.png" alt="" />
+                                <div class="container-image img-hover-zoom--blur">
+                                    <img src="assets/product-1.png" alt="" />
+                                </div>
                                 <div class="description">
                                     <h3>Biji Kopi House Blend ETC 50% Robusta 50% Arabica</h3>
                                     <h5>Rp50.000 - Rp100.000</h5>
@@ -128,13 +117,16 @@
                     <ul>
                         while(){
                         <li>
-                            <div class="product">
-                                <img src="assets/product-1.png" alt="" />
+                            <div class="product img-hover-zoom--blur">
+                                <div class="container-image  img-hover-zoom--blur">
+                                    <img src="assets/product-1.png" alt="" />
+                                </div>
                                 <div class="description">
                                     <h3>Biji Kopi House Blend ETC 50% Robusta 50% Arabica</h3>
                                     <h5>Rp50.000 - Rp100.000</h5>
                                 </div>
                             </div>
+
                         </li>
                     </ul>
                 </div>

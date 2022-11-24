@@ -43,7 +43,7 @@
         </div>
     </nav>
 
-    <section class="bg-dark" id="landing">
+    <section class="bg-dark">
         <div class="container py-5 px-2">
             <div class="row gx-3 d-flex align-items-center justify-content-center">
                 <div class="col-6 col-lg-5 col-xl-5 col-xxl-4 ">
