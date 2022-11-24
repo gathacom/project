@@ -11,28 +11,29 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Gustoro Coffee Shop</title>
 
     <style>
-        .product img {
-            width: 300px;
-        }
+    .product img {
+        width: 300px;
+    }
 
-        .product .description {
-            margin-left: 20px;
-        }
+    .product .description {
+        margin-left: 20px;
+    }
 
-        .product {
-            padding: 10px;
-            display: flex;
-        }
+    .product {
+        padding: 10px;
+        display: flex;
+    }
 
-        form .input {
-            padding: 10px;
-        }
+    form .input {
+        padding: 10px;
+    }
     </style>
 
 </head>
@@ -41,7 +42,9 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
     <header class="bg-dark py-5">
         <nav class="nav navbar-expand-lg fixed-top p-5   navbar-dark">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle" aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle"
+                    aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -73,7 +76,9 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                 </div>
                 <div class="col-6 col-xl-4 col-xxl-5 text-center">
                     <div class="lottie-product">
-                        <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_fpdvsz3i.json" background="transparent" style="width:400px;height:400px;" speed="1" loop autoplay></lottie-player>
+                        <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_fpdvsz3i.json"
+                            background="transparent" style="width:400px;height:400px;" speed="1" loop autoplay>
+                        </lottie-player>
                     </div>
                 </div>
             </div>
@@ -83,9 +88,9 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
     <section class="bg-light">
         <div class="">
             <div class="row">
-                <div class="col-md-3 bg-warning">
-                    <div class="container mx-5">
-                        <h3>Categories</h3>
+                <div class="col-md-3 container-category">
+                    <div class="container mx-1 category">
+                        <h2 class="mb-2">Categories</h2>
                         <div data-toggle="modal" data-target="#tambah-kategori" class="p-3">
                             <a href="#" class="btn btn-dark">Tambah Kategori</a>
                         </div>
@@ -94,16 +99,19 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                 <?php
                                 while ($jenis = mysqli_fetch_array($query)) {
                                 ?>
-                                    <li><a href="#<?php echo $jenis['nama_jenis']; ?>"><?php echo $jenis['nama_jenis'] ?></a></li>
+                                <li><a
+                                        href="#<?php echo $jenis['nama_jenis']; ?>"><?php echo $jenis['nama_jenis'] ?></a>
+                                </li>
                                 <?php } ?>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-9 mt-5">
+                <div class="col-md-9 container-product bg-light">
                     <div>
                         <div class="mb-5 text-center">
-                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#tambah-product">Tambah Product</a>
+                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#tambah-product">Tambah
+                                Product</a>
                         </div>
                         <?php
                             
@@ -175,7 +183,12 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                         $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                         while ($jenis = mysqli_fetch_array($query)) {
                                         ?>
+<<<<<<< HEAD
                                             <option value="<?php echo $jenis['id_jenis'] ?>"><?php echo $jenis['nama_jenis'] ?></option>
+=======
+                                        <option value="<?php echo $jenis['id_jenis'] ?>">
+                                            <?php echo $jenis['nama_jenis'] ?></option>
+>>>>>>> 293b5e8a55807d7f54fa46379545bc6e4e6113a2
                                         <?php } ?>
                                     </select>
                                 </div>
@@ -185,11 +198,17 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                 </div>
                                 <div class="input">
                                     <label for="jumlah-product" class="form-label">Jumlah Produk Tersedia</label>
-                                    <input type="number" name="jumlah_tersedia" id="jumlah-product" class="form-control">
+                                    <input type="number" name="jumlah_tersedia" id="jumlah-product"
+                                        class="form-control">
                                 </div>
                             </div>
                             <div class="input">
+<<<<<<< HEAD
                                 <input type="submit" class="btn btn-warning" value="Tambah">
+=======
+                                <input type="submit" name="submit" class="btn btn-warning" value="Tambah"
+                                    data-dismiss="modal">
+>>>>>>> 293b5e8a55807d7f54fa46379545bc6e4e6113a2
                                 <input type="button" class="btn btn-warning" value="Close" data-dismiss="modal">
                             </div>
 
@@ -232,7 +251,9 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
