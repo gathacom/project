@@ -183,12 +183,8 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                         $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                         while ($jenis = mysqli_fetch_array($query)) {
                                         ?>
-<<<<<<< HEAD
-                                            <option value="<?php echo $jenis['id_jenis'] ?>"><?php echo $jenis['nama_jenis'] ?></option>
-=======
                                         <option value="<?php echo $jenis['id_jenis'] ?>">
                                             <?php echo $jenis['nama_jenis'] ?></option>
->>>>>>> 293b5e8a55807d7f54fa46379545bc6e4e6113a2
                                         <?php } ?>
                                     </select>
                                 </div>
@@ -203,13 +199,8 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                 </div>
                             </div>
                             <div class="input">
-<<<<<<< HEAD
                                 <input type="submit" class="btn btn-warning" value="Tambah">
-=======
-                                <input type="submit" name="submit" class="btn btn-warning" value="Tambah"
-                                    data-dismiss="modal">
->>>>>>> 293b5e8a55807d7f54fa46379545bc6e4e6113a2
-                                <input type="button" class="btn btn-warning" value="Close" data-dismiss="modal">
+                                <input type="button" class="btn btn-warning" value="Close">
                             </div>
 
                         </div>
