@@ -236,12 +236,13 @@ bg-dark{
   
 .img-hover-zoom--blur:hover img {
     transform: scale(1);
-  }
+}
 
 .login-bg{
     background-image: url(../assets/login.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .login-box{
@@ -254,29 +255,43 @@ bg-dark{
     background-color: #2a3036;
     box-shadow: 0 15px 25px black;
     border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+.register-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 680px;
+    padding:40px;
+    transform: translate(-50%, -50%); 
+    background-color: #2a3036;
+    box-shadow: 0 15px 25px black;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.login-box h2{
+.login-box h2, .register-box h2{
     margin: 0 0 50px 0;
     padding: 0;
     color: white;
     text-align: center;
 }
 
-.login-box .user-box input{
+.login-box .user-box input, .register-box .user-box input{
     position: relative;
     width: 100%;
     padding: 5px 0;
     font-size: 16px;
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
+    margin-right: 5px;
     border: none;
     border-bottom: 1px solid white;
     outline: none;
     background-color: transparent;
 }
 
-.login-box .user-box label{
+.login-box .user-box label, .register-box .user-box label{
     position: relative;
     left: 0;
     top: -60px;
@@ -288,7 +303,9 @@ bg-dark{
 }
 
 .login-box .user-box input:focus~label,
-.login-box .user-box input:valid~label {
+.login-box .user-box input:valid~label, 
+.register-box .user-box input:focus~label,
+.register-box .user-box input:valid~label {
     top: -85px;
     left: 0;
     color: aqua;
@@ -297,7 +314,7 @@ bg-dark{
 
 #submit {
     padding:10px 20px;
-    color: white;
+    color: black;
     font-size: 16px;
     text-decoration: none;
     overflow: hidden;
@@ -309,14 +326,16 @@ bg-dark{
 }
 
 #submit:hover {
-    background-color: white;
-    color: #212529;
+    background-color: #2a3036;
+    color: white;
     border-radius: 5px;
 }
 
 .btn-form{
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     margin-top: 20px;
 }
 

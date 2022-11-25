@@ -1,3 +1,20 @@
+<?php
+if (isset($_GET['message'])) {
+    if ($_GET['message'] == "gagal") {
+        $alert = "Login gagal. Username atau password salah.";
+    } elseif ($_GET['message'] == "logout") {
+        $alert = "Anda telah berhasil logout.";
+    } elseif ($_GET['message'] == "belum_login") {
+        $alert = "Anda harus login terlebih dahulu untuk mengakses halaman.";
+    } elseif ($_GET['message'] == "Registrasi Berhasil") {
+        $alert = "Silahkan Login";
+    }
+} else {
+    $alert = " ";
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,17 +37,18 @@
             <div class="col-6 col-lg-5 col-xl-5 col-xxl-4">
                 <div class="login-box">
                     <h2>LOGIN</h2>
+                    <h6 class="alert"><?= $alert ?></h6>
                     <form method="post" action="p-login.php">
                         <div class="user-box">
-                            <input type="text" name="username" required="required" />
+                            <input type="text" required="required" name="username" required="required" />
                             <label for="username">Username</label>
                         </div>
                         <div class="user-box">
-                            <input type="password" name="password" required="required" />
+                            <input type="password" required="required" name="password" required="required" />
                             <label for="password">Password</label>
                         </div>
                         <div class="btn-form">
-                            <a id="submit" href="p-login.php">LOGIN</a>
+                            <input type="submit" id="submit" value="LOGIN" />
                             <div class="register">
                                 Ga Punya Akun? <br>
                                 <a href="register.php">Daftar di sini</a>

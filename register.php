@@ -18,21 +18,31 @@
     <section class="py-5 position-relative" id="section1">
         <div class="gx-3 d-flex align-items-center justify-content-center">
             <div class="col-6 col-lg-5 col-xl-5 col-xxl-4">
-                <div class="login-box">
+                <div class="register-box">
                     <h2>REGISTER</h2>
                     <form method="post" action="p-register.php">
                         <div class="user-box">
-                            <input type="text" name="username" required="required" />
-                            <label for="username">Username</label>
+                            <input type="text" name="name" required="required" />
+                            <label for="name">Nama</label>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between ">
+                            <div class="user-box">
+                                <input type="text" class="username" name="username" required="required" />
+                                <label for="username">Username</label>
+                            </div>
+                            <div class="user-box ml-3">
+                                <input type="password" name="password" required="required" />
+                                <label for="password">Password</label>
+                            </div>
                         </div>
                         <div class="user-box">
-                            <input type="password" name="password" required="required" />
-                            <label for="password">Password</label>
+                            <input type="tel" name="tel" required="required" />
+                            <label for="tel">No. Telepon</label>
                         </div>
-                        <div class="btn-form">
-                            <a id="submit" href="p-login.php">DAFTAR</a>
+                        <div class="btn-form ">
+                            <input type="submit" id="submit" value="Sign Up" />
                             <div class="register">
-                                Kamu Dah Punya Akun? <br>
+                                Dah Punya Akun? <br>
                                 <a href="login.php">Login di sini</a>
                             </div>
                         </div>
