@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD:reservasi.php
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+=======
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
+>>>>>>> 293b5e8a55807d7f54fa46379545bc6e4e6113a2:admin/edit-product.php
     <title>Gustoro Coffee Shop</title>
 
     <style>
@@ -29,7 +34,7 @@
 
 <body class="home-bg">
     <header class="bg-dark py-5">
-        <nav class="nav navbar-expand-lg fixed-top p-5   navbar-dark">
+        <nav class="nav navbar-expand-lg sticky-top p-5   navbar-dark">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle"
                     aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation"><span
@@ -76,6 +81,29 @@
 
     <section class="bg-light">
         <div class="">
+<<<<<<< HEAD:reservasi.php
+        <div class="row">
+            <div class="col-md-3 bg-warning ">
+                <div class="container mx-5">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#list-coffee">Coffee</a></li>
+                    <li><a href="#list-tea">Tea</a></li>
+                    <li><a href="#list-food">Food</a></li>
+                </ul>
+                </div>
+            </div>
+            <div class="col-md-9 mt-5">
+                <div id="list-coffee">
+                    <ul>
+                    while(){
+                        <li>
+                    <div class="product">
+                        <img src="assets/product-1.png" alt="">
+                        <div class="description">
+                        <h3>Biji Kopi House Blend ETC 50% Robusta 50% Arabica</h3>
+                        <h5> Rp50.000 - Rp100.000</h5>
+=======
             <div class="row">
                 <div class="col-md-3 bg-warning">
                     <div class="container mx-5">
@@ -91,6 +119,7 @@
                     <div>
                         <div class="mb-5 text-center">
                             <a href="p-input-product.php" class="btn btn-warning ">Tambah Product</a>
+>>>>>>> 293b5e8a55807d7f54fa46379545bc6e4e6113a2:admin/edit-product.php
                         </div>
                         <ul>
                             <li>
@@ -104,6 +133,23 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div id="list-tea">
+                    <ul>
+                    while(){
+                        <li>
+                    <div class="product">
+                        <img src="assets/product-1.png" alt="">
+                        <div class="description">
+                        <h3>Biji Kopi House Blend ETC 50% Robusta 50% Arabica</h3>
+                        <h5> Rp50.000 - Rp100.000</h5>
+                        </div>
+                    </div>
+                    </li>
+                    </ul>
+                </div>
+                <div id="list-food">
+                    
                 </div>
             </div>
         </div>
