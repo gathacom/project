@@ -38,34 +38,35 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
 
 </head>
 
-<body class="home-bg">
-    <header class="bg-dark py-5">
-        <nav class="nav navbar-expand-lg fixed-top p-5   navbar-dark">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle"
-                    aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link" aria-current="page">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link" aria-current="page">PROFILE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="products.php" class="nav-link" aria-current="page">PRODUCTS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link" aria-current="page">CONTACT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link" aria-current="page">ORDER</a>
-                        </li>
-                    </ul>
-                </div>
+<body>
+    <nav class="nav nav-bg navbar-expand-lg sticky-top navbar-dark p-3">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle"
+                aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="home.php" class="nav-link" aria-current="page">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" aria-current="page">PROFILE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.php" class="nav-link" aria-current="page">PRODUCTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" aria-current="page">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" aria-current="page">ORDER</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
+    <section class="bg-dark py-5 position-relative" id="landing">
         <div class="container px-2">
             <div class="row gx-3 d-flex align-items-center justify-content-center">
                 <div class="col-6 col-lg-5 col-xl-5 col-xxl-4 ">
@@ -83,7 +84,8 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                 </div>
             </div>
         </div>
-    </header>
+    </section>
+
 
     <section class="bg-light">
         <div class="">

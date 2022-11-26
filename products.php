@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link" aria-current="page">HOME</a>
+                        <a href="home.php" class="nav-link" aria-current="page">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a href="#home" class="nav-link" aria-current="page">PROFILE</a>
@@ -42,33 +42,28 @@
             </div>
         </div>
     </nav>
-    <section class="bg-dark py-5 position-relative" id="landing">
+    <section class="bg-dark position-relative d-flex align-items-center flex-column justify-content-center"
+        id="section1">
         <div class="container px-2">
             <div class="row gx-3 d-flex align-items-center justify-content-center">
-                <div class="col-6 col-lg-5 col-xl-5 col-xxl-4">
-                    <div class="my-5 text-warning text-center text-xl-start">
-                        <h1 class="display-2 fw-bolder mb-2">Our Products</h1>
+                <div class=" d-flex align-items-center flex-column justify-content-center">
+                    <div
+                        class="text-warning text-center text-xl-center d-flex flex-column align-items-center justify-content-center">
+                        <h1 class="display-2 fw-bolder mb-2 ">Our Products</h1>
                         <h5 class="lead fw-normal mb-4">Tell us what do you want</h5>
                     </div>
+                    <a class="btn" href="#list-coffee"> <button class="button-profile">Lihat Produk
+                        </button></a>
                 </div>
                 <div class="col-6 col-xl-4 col-xxl-5 text-center">
-                    <div class="lottie-product">
-                        <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_fpdvsz3i.json"
-                            background="transparent" style="width: 400px; height: 400px" speed="1" loop autoplay>
-                        </lottie-player>
-                    </div>
+
                 </div>
             </div>
         </div>
-        <!-- <div class="custom-shape-divider-bottom-1669189821">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                preserveAspectRatio="none">
-                <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
-            </svg>
-        </div> -->
+        </div>
     </section>
 
-    <section id="home1">
+    <section id="section2">
         <div class="row">
             <div class="col-3 container-category">
                 <div class="container mx-1 category">
