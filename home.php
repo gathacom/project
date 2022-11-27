@@ -36,7 +36,10 @@
                         <a href="#slide4" class="nav-link" aria-current="page">ORDER</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#slide5" class="nav-link" aria-current="page">RESERVASi</a>
+                        <a href="#slide5" class="nav-link" aria-current="page">RESERVASI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#slide6" class="nav-link" aria-current="page">GALLERY</a>
                     </li>
                 </ul>
             </div>
@@ -166,14 +169,62 @@
                     </div>
                     <a class="btn btn-dark mt-3 text-uppercase" href="reservasi.php"><span>Booking</span></a>
                 </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="bg-light pt-5 container-fitur d-flex flex-column" id="slide6">
+        <h1 class="pt-2">GALLERY</h1>
+        <div class="gallery mt-5">
+            <div class="pic img-hover">
+                <img src="assets/gallery1.jpg" />
+            </div>
+            <div class="pic img-hover">
+                <img src="assets/gallery2.jpg" />
+            </div>
+            <div class="pic img-hover">
+                <img src="assets/gallery3.jpg" />
+            </div>
+            <div class="pic img-hover">
+                <img src="assets/gallery4.jpg" />
+            </div>
+            <div class="pic img-hover">
+                <img src="assets/gallery5.jpg" />
+            </div>
+            <div class="pic img-hover">
+                <img src="assets/gallery6.png" />
+            </div>
+            <div class="pic img-hover">
+                <img src="assets/gallery7.jpg" />
+            </div>
+            <div class="pic img-hover">
+                <img src="assets/gallery8.jpg" />
             </div>
         </div>
     </section>
 
 
+    <div class="container-footer bg-dark">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap" />
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-white">&copy; 2022 Gustoro Coffee, Inc</span>
+            </div>
 
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <ul class=" nav col-md-4 justify-content-end d-flex">
+                <li class="ms-3" class="text-white"> Gustian
+                </li>
+                <li class="ms-3" class="text-white"> Yoga Paok
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>

@@ -164,6 +164,11 @@ bg-dark{
     top : 6em;
 }
 
+.container-footer{
+    width: 100%;
+    height: 20%;
+}
+
 .container-category{
     position : relative;
     background-color: #ffc107;
@@ -195,7 +200,7 @@ bg-dark{
     width: 100%;
 }
 
-#section1, #slide1, #slide2, #slide3, #slide4, #slide5{
+#section1, #slide1, #slide2, #slide3, #slide4, #slide5, #slide6{
     height:100vh;
     display: flex;
     justify-content: center;
@@ -242,12 +247,12 @@ bg-dark{
     transform: scale(1);
 }
 .img-hover img {
-    transition: transform .5s, filter 1.5s ease-in-out;
+    transition: transform .5s, filter .5s ease-in-out;
     filter: grayscale(100%);}
 
 .img-hover:hover img {
     filter: grayscale(0);
-    transform: scale(1.1);}
+    transform: scale(0.9);}
 
 
 .login-bg{
@@ -478,4 +483,24 @@ color: #ffffff;
 }
 
 
+/* end */
+
+/* gallery */
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+}
+
+.pic{
+    position: relative;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
 /* end */
