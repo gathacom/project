@@ -87,8 +87,11 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                 <?php
                                 while ($jenis = mysqli_fetch_array($query)) {
                                 ?>
-                                <li><a
-                                        href="#<?php echo $jenis['nama_jenis']; ?>"><?php echo $jenis['nama_jenis'] ?></a>
+                                <li><a href="#<?php echo $jenis['nama_jenis']; ?>"
+                                        class="link-category"><?php echo $jenis['nama_jenis'] ?></a>
+                                    <button>
+                                        <i class="bi bi-x"></i>
+                                    </button>
                                 </li>
                                 <?php } ?>
                             </ul>
