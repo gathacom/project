@@ -11,10 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <title>Gustoro Coffee Shop</title>
+    <title>Gustoro Coffee</title>
 </head>
 
 <body>
+
     <nav class="nav nav-bg navbar-expand-lg fixed-top navbar-dark p-3">
         <div class="container-fluid">
             <a href="logout.php" class="btn-logout position-absolute"> <button class="btn-danger">Logout</button></a>
@@ -36,33 +37,7 @@
             </div>
         </div>
     </nav>
-    <div class="container px-2">
-        <div class="row gx-3 d-flex align-items-center justify-content-center">
-            <div class="col-6 col-lg-5 col-xl-5 col-xxl-4 ">
-                <div class="my-5 text-warning text-center text-xl-start">
-                    <h1 class="display-2 fw-bolder mb-2">Our Products</h1>
-                    <h5 class="lead fw-normal mb-4">Tell us what do you want</h5>
-                </div>
-            </div>
-            <div class="col-6 col-xl-4 col-xxl-5 text-center">
-                <div class="lottie-product">
-                    <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_fpdvsz3i.json"
-                        background="transparent" style="width:400px;height:400px;" speed="1" loop autoplay>
-                    </lottie-player>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <section class="bg-light">
-
-    </section>
-
-
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
-    </script>
 </body>
 
 </html>

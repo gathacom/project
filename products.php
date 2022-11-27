@@ -17,26 +17,20 @@
 <body>
     <nav class="nav nav-bg navbar-expand-lg fixed-top navbar-dark p-3">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle"
-                aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a href="logout.php" class="btn-logout position-absolute"> <button class="btn-danger">Logout</button></a>
             <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a href="home.php" class="nav-link" aria-current="page">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#home" class="nav-link" aria-current="page">PROFILE</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="products.php" class="nav-link" aria-current="page">PRODUCTS</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#home" class="nav-link" aria-current="page">CONTACT</a>
+                        <a href="order.php" class="nav-link" aria-current="page">ORDER</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#home" class="nav-link" aria-current="page">ORDER</a>
+                        <a href="reservasi.php" class="nav-link" aria-current="page">RESERVASI</a>
                     </li>
                 </ul>
             </div>

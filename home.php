@@ -1,3 +1,16 @@
+<?php
+session_start();
+if (empty($_SESSION['username'])) {
+    $url = "login.php?value=1";
+    $url2 = "login.php?value=2";
+    $url3 = "login.php?value=3";
+} else {
+    $url = "order.php";
+    $url2 = "reservasi.php";
+    $url3 = "products.php";
+} ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,10 +30,15 @@
 <body>
     <nav class="nav nav-bg navbar-expand-lg fixed-top navbar-dark p-3">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle"
-                aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <?php
+            if (empty($_SESSION['username'])) { ?>
+            <a href="login.php?value=0" class="btn-login position-absolute"> <button
+                    class="button-profile">Login</button></a>
+            <?php } else { ?>
+            <a href="logout.php" class="btn-logout position-absolute"> <button class="btn-danger">Logout</button></a>
+            <?php
+            }
+            ?>
             <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -128,7 +146,7 @@
                         <h2 class="mb-4 ">OUR PRODUCT</h2>
                         <p>Dari minunan tradisional berbasis espresso sampai berbagai minuman
                             racikan kopi terkini.</p>
-                        <a class="btn button-profile mt-3 text-uppercase" href="products.php"><span>Product</span></a>
+                        <a class="btn button-profile mt-3 text-uppercase" href="p<?= $url3 ?>"><span>Product</span></a>
                     </div>
                 </div>
             </div>
@@ -144,7 +162,8 @@
                         <h1> ORDER </h1>
                         <h6 class="mt-3"> Malas Ngantri? <br> Bisa loh order secara Online <br> Klik tombol di bawah
                             untuk memesan</h6>
-                        <a class="btn btn-dark mt-3 text-uppercase" href="order.php"><span>Order</span></a>
+
+                        <a class="btn btn-dark mt-3 text-uppercase" href="<?= $url ?>"><span>Order</span></a>
                     </div>
                 </div>
                 <div class="col-lg-5 pr-4">
@@ -167,7 +186,7 @@
                         <h6 class="mt-3"> Takut kehabisan meja untuk nongki?<br> Mau pacaran tapi meja udah penuh?
                             <br>Yuk, Booking meja sekarang!!
                     </div>
-                    <a class="btn btn-dark mt-3 text-uppercase" href="reservasi.php"><span>Booking</span></a>
+                    <a class="btn btn-dark mt-3 text-uppercase" href="<?= $url2 ?>"><span>Booking</span></a>
                 </div>
             </div>
         </div>

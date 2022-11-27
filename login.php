@@ -12,6 +12,8 @@ if (isset($_GET['message'])) {
 } else {
     $alert = " ";
 }
+
+$value = $_GET['value'];
 ?>
 
 
@@ -38,7 +40,7 @@ if (isset($_GET['message'])) {
                 <div class="login-box">
                     <h2>LOGIN</h2>
                     <h6 class="alert"><?= $alert ?></h6>
-                    <form method="post" action="p-login.php">
+                    <form method="post" action="p-login.php?value=<?php echo $value ?>">
                         <div class="user-box">
                             <input type="text" required="required" name="username" required="required" />
                             <label for="username">Username</label>
