@@ -28,9 +28,9 @@ if ($cek > 0) {
         } else if ($value == '2') {
             header("location: reservasi.php");
         } else if ($value == '3') {
-            header("location: product.php");
+            header("location: products.php");
         }
     }
 } else {
-    header("location: login.php?message=gagal");
+    header("location: login.php?message=gagal&value=$value");
 }

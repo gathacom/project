@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (empty($_SESSION['username'])) {
+    $url3 = "login.php?value=3";
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +27,15 @@
 <body>
     <nav class="nav nav-bg navbar-expand-lg fixed-top navbar-dark p-3">
         <div class="container-fluid">
+            <?php
+            if (empty($_SESSION['username'])) { ?>
+            <a href="<?= $url3 ?>" class="btn-login position-absolute"> <button
+                    class="button-profile">Login</button></a>
+            <?php } else { ?>
             <a href="logout.php" class="btn-logout position-absolute"> <button class="btn-danger">Logout</button></a>
-            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
+            <?php
+            }
+            ?> <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a href="home.php" class="nav-link" aria-current="page">HOME</a>

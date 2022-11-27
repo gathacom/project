@@ -3,11 +3,9 @@ session_start();
 if (empty($_SESSION['username'])) {
     $url = "login.php?value=1";
     $url2 = "login.php?value=2";
-    $url3 = "login.php?value=3";
 } else {
     $url = "order.php";
     $url2 = "reservasi.php";
-    $url3 = "products.php";
 } ?>
 
 
@@ -146,7 +144,7 @@ if (empty($_SESSION['username'])) {
                         <h2 class="mb-4 ">OUR PRODUCT</h2>
                         <p>Dari minunan tradisional berbasis espresso sampai berbagai minuman
                             racikan kopi terkini.</p>
-                        <a class="btn button-profile mt-3 text-uppercase" href="p<?= $url3 ?>"><span>Product</span></a>
+                        <a class="btn button-profile mt-3 text-uppercase" href="products.php"><span>Product</span></a>
                     </div>
                 </div>
             </div>

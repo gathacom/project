@@ -1,7 +1,8 @@
 <?php
+$value = $_GET['value'];
 if (isset($_GET['message'])) {
     if ($_GET['message'] == "gagal") {
-        $alert = "Login gagal. Username atau password salah.";
+        $alert = "Username atau password salah.";
     } elseif ($_GET['message'] == "logout") {
         $alert = "Anda telah berhasil logout.";
     } elseif ($_GET['message'] == "belum_login") {
@@ -13,7 +14,9 @@ if (isset($_GET['message'])) {
     $alert = " ";
 }
 
-$value = $_GET['value'];
+
+
+
 ?>
 
 
@@ -39,7 +42,7 @@ $value = $_GET['value'];
             <div class="col-6 col-lg-5 col-xl-5 col-xxl-4">
                 <div class="login-box">
                     <h2>LOGIN</h2>
-                    <h6 class="alert"><?= $alert ?></h6>
+                    <h6 class="text-center text-white small"><?= $alert ?></h6>
                     <form method="post" action="p-login.php?value=<?php echo $value ?>">
                         <div class="user-box">
                             <input type="text" required="required" name="username" required="required" />

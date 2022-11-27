@@ -51,7 +51,6 @@ bg-dark{
     color: white;
 }
 
-
 .img1{
     width: 250px;
     height: 250px;
@@ -305,10 +304,15 @@ bg-dark{
 }
 
 .login-box h2, .register-box h2{
-    margin: 0 0 50px 0;
+    margin: 0 0 10px 0;
     padding: 0;
     color: white;
     text-align: center;
+}
+
+.login-box h6{
+    margin-bottom: 50px;
+    text-decoration: underline red;
 }
 
 .login-box .user-box input, .register-box .user-box input{
