@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="nav nav-bg navbar-expand-lg sticky-top navbar-dark p-3">
+    <nav class="nav nav-bg navbar-expand-lg fixed-top navbar-dark p-3">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle"
                 aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,18 +42,20 @@
             </div>
         </div>
     </nav>
-    <section class="bg-dark position-relative d-flex align-items-center flex-column justify-content-center"
-        id="section1">
+    <section class="bg-dark position-relative d-flex align-items-center justify-content-center" id="section1">
         <div class="container px-2">
-            <div class="row gx-3 d-flex align-items-center justify-content-center">
+            <div class="row gx-3 d-flex align-items-start justify-content-center">
                 <div class=" d-flex align-items-center flex-column justify-content-center">
+                    <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_fpdvsz3i.json"
+                        background="transparent" speed="1.5" style="width: 300px; height: 300px;" loop autoplay>
+                    </lottie-player>
                     <div
                         class="text-warning text-center text-xl-center d-flex flex-column align-items-center justify-content-center">
-                        <h1 class="display-2 fw-bolder mb-2 ">Our Products</h1>
-                        <h5 class="lead fw-normal mb-4">Tell us what do you want</h5>
+                        <h1 class="display-2 fw-bolder mb-1 ">Our Products</h1>
+                        <h5 class="lead fw-normal mb-3">Tell us what do you want</h5>
+                        <a class="btn" href="#list-coffee"> <button class="button-profile">Lihat Produk
+                            </button></a>
                     </div>
-                    <a class="btn" href="#list-coffee"> <button class="button-profile">Lihat Produk
-                        </button></a>
                 </div>
                 <div class="col-6 col-xl-4 col-xxl-5 text-center">
 
@@ -128,6 +130,8 @@
             </div>
         </div>
     </section>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">

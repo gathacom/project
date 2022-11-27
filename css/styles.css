@@ -2,6 +2,7 @@
     margin : 0;
     padding : 0;
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
 .masthead{
@@ -194,8 +195,11 @@ bg-dark{
     width: 100%;
 }
 
-#section1{
+#section1, #slide1, #slide2, #slide3, #slide4, #slide5{
     height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #section2{
@@ -237,6 +241,14 @@ bg-dark{
 .img-hover-zoom--blur:hover img {
     transform: scale(1);
 }
+.img-hover img {
+    transition: transform .5s, filter 1.5s ease-in-out;
+    filter: grayscale(100%);}
+
+.img-hover:hover img {
+    filter: grayscale(0);
+    transform: scale(1.1);}
+
 
 .login-bg{
     background-image: url(../assets/login.jpg);
@@ -353,3 +365,117 @@ bg-dark{
     color: white;
     text-decoration: underline;
 }
+
+/* Feature section*/
+
+.container-fitur {
+    font-family: "Poppins", sans-serif;
+    color: #8d97ad;
+    font-weight: 300;
+}
+
+.container-fitur h1, .container-fitur h2, .container-fitur h3, .container-fitur h4, .container-fitur h5, .container-fitur h6 {
+color: #3e4555;
+}
+
+.container-fitur .font-weight-medium {
+    font-weight: 500;
+}
+
+.container-fitur .bg-light {
+    background-color: #f4f8fa !important;
+}
+
+.container-fitur .subtitle {
+    color: #8d97ad;
+    line-height: 24px;
+}
+
+.container-fitur .card.card-shadow {
+    box-shadow: 10px 12px 5px 0px rgba(2,0,36,0.25);
+    -webkit-box-shadow: 10px 12px 5px 0px rgba(2,0,36,0.25);
+    -moz-box-shadow: 10px 12px 5px 0px rgba(2,0,36,0.25);
+}
+
+.container-fitur .wrap-fitur-box {
+margin-top: 60px;
+}
+
+.container-fitur .wrap-fitur-box .icon-space {
+margin: -70px 0 20px;
+overflow: hidden;
+}
+
+.container-fitur .wrap-fitur-box .icon-space .icon-round {
+font-size: 45px;
+color: #ffffff;
+}
+
+.container-fitur .icon-round {
+    width: 80px;
+    line-height: 80px;
+    border: 2px solid black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-fitur .icon{
+    width: 65%;
+    height: auto;
+}
+.container-fitur .btn-md {
+    padding: 15px 45px;
+    font-size: 16px;
+}
+/* end of feature section */
+
+/* Perkenalan Produk */
+.container-gambar {
+    background-image:url(../assets/coffee4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+} 
+.container-gambar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+.container-gambar .container{
+    position: relative;
+    background-color: rgb(33,37,41);
+    background-color: rgb(33,37,41, 0.3); 
+    width: 100%;
+    height: 100%;
+    border-radius:10px;
+    font-weight: 400;
+}
+
+.container-gambar .container .button-profile,
+.container-gambar .container .button-profile:before,
+.container-gambar .container .button-profile:hover::before,
+.container-gambar .container .button-profile:active{
+    background: linear-gradient(90deg, rgba(33,37,41,1) 35%, rgba(255,193,7,1) 100%)
+}
+
+.btn-dark:hover{
+    background-color: transparent;
+    color:black;
+}
+
+
+/* end */
