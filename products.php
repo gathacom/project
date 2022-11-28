@@ -32,7 +32,8 @@ if (empty($_SESSION['username'])) {
             <a href="<?= $url3 ?>" class="btn-login position-absolute"> <button
                     class="button-profile">Login</button></a>
             <?php } else { ?>
-            <a href="logout.php" class="btn-logout position-absolute"> <button class="btn-danger">Logout</button></a>
+            <a href="logout.php?value=0" class="btn-logout position-absolute"> <button
+                    class="btn-danger">Logout</button></a>
             <?php
             }
             ?> <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">

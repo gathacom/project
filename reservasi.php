@@ -1,3 +1,7 @@
+<?php
+include 'sessions.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,29 +40,50 @@
             </div>
         </div>
     </nav>
-    <div class="container px-2">
-        <div class="row gx-3 d-flex align-items-center justify-content-center">
-            <div class="col-6 col-lg-5 col-xl-5 col-xxl-4 ">
-                <div class="my-5 text-warning text-center text-xl-start">
-                    <h1 class="display-2 fw-bolder mb-2">Our Products</h1>
-                    <h5 class="lead fw-normal mb-4">Tell us what do you want</h5>
+    <section class="bg-dark position-relative d-flex align-items-center justify-content-center" id="section1">
+        <div class="container px-2">
+            <div class="row gx-3 d-flex align-items-center justify-content-center">
+                <div class="col-6 col-lg-5 col-xl-5 col-xxl-4 ">
+                    <div class="my-5 text-warning text-center text-xl-start">
+                        <h1 class="display-2 fw-bolder mb-2">RESERVASI</h1>
+                        <h6 class="lead fw-normal">Siapkan tempat untuk hari istimewamu</h6>
+                        <h6 class="lead fw-normal mb-4">Booking sekarang! Jangan sampai kehabisan</h6>
+                        <a class="btn" href="#reservasi"> <button class="button-profile">Booking
+                            </button></a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-6 col-xl-4 col-xxl-5 text-center">
-                <div class="lottie-product">
-                    <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_fpdvsz3i.json"
-                        background="transparent" style="width:400px;height:400px;" speed="1" loop autoplay>
-                    </lottie-player>
+                <div class="col-6 col-xl-4 col-xxl-5 text-center">
+                    <div class="lottie-product">
+                        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_bvnaorwi.json"
+                            background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
+                        </lottie-player>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <section class="bg-light">
+    <section class="bg-light position-relative d-flex align-items-center justify-content-center" id="reservasi">
+        <div class="container py-3">
+            <div class="row">
+                <div class="col-lg-7 d-flex justify-content-center align-items-center">
+                    <div class="text-box ">
+                        <h1> RESERVASI</h1>
+                        <form>
 
+                        </form>
+                        <a class="btn btn-dark mt-3 text-uppercase" href="<?= $url ?>"><span>Order</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 pr-4">
+                    <img src="assets/coffee3.jpg" class="img-fluid" alt="" />
+                </div>
+            </div>
+        </div>
     </section>
 
 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
