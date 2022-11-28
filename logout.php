@@ -2,4 +2,4 @@
 session_start();
 session_destroy();
 
-header("location: login.php?message=logout");
+header("location: home.php?message=logout");
