@@ -38,6 +38,7 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
 
 </head>
 
+<<<<<<< HEAD
 <body class="home-bg">
     <header class="bg-dark py-5">
         <nav class="nav navbar-expand-lg fixed-top p-5   navbar-dark">
@@ -62,25 +63,49 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                         </li>
                     </ul>
                 </div>
+=======
+<body>
+    <nav class="nav nav-bg navbar-expand-lg fixed-top navbar-dark p-3">
+        <div class="container-fluid">
+            <a href="../logout.php" class="btn-logout position-absolute"> <button class="btn-danger">Logout</button></a>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="homepage-admin.php" class="nav-link" aria-current="page">HOME</a>
+                    </li>
+                </ul>
+>>>>>>> 3f29dd684721b3a9901608ac0d1665438d737009
             </div>
-        </nav>
+        </div>
+    </nav>
+    <section class="bg-dark position-relative d-flex align-items-center justify-content-center" id="section1">
         <div class="container px-2">
-            <div class="row gx-3 d-flex align-items-center justify-content-center">
-                <div class="col-6 col-lg-5 col-xl-5 col-xxl-4 ">
-                    <div class="my-5 text-warning text-center text-xl-start">
-                        <h1 class="display-2 fw-bolder mb-2">Our Products</h1>
-                        <h5 class="lead fw-normal mb-4">Tell us what do you want</h5>
+            <div class="row gx-3 d-flex align-items-start justify-content-center">
+                <div class=" d-flex align-items-center flex-column justify-content-center">
+                    <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_fpdvsz3i.json"
+                        background="transparent" speed="1.5" style="width: 300px; height: 300px;" loop autoplay>
+                    </lottie-player>
+                    <div
+                        class="text-warning text-center text-xl-center d-flex flex-column align-items-center justify-content-center">
+                        <h1 class="display-2 fw-bolder mb-1 ">EDIT PRODUCT</h1>
+                        <h5 class="lead fw-normal mb-3">Selamat Bekerja para Admin</h5>
                     </div>
                 </div>
                 <div class="col-6 col-xl-4 col-xxl-5 text-center">
+<<<<<<< HEAD
                     <div class="lottie-product">
                         <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_fpdvsz3i.json" background="transparent" style="width:400px;height:400px;" speed="1" loop autoplay>
                         </lottie-player>
                     </div>
+=======
+
+>>>>>>> 3f29dd684721b3a9901608ac0d1665438d737009
                 </div>
             </div>
         </div>
-    </header>
+        </div>
+    </section>
+
 
     <section class="bg-light">
         <div class="">
@@ -96,8 +121,17 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                 <?php
                                 while ($jenis = mysqli_fetch_array($query)) {
                                 ?>
+<<<<<<< HEAD
                                     <li><a href="#<?php echo $jenis['nama_jenis']; ?>"><?php echo $jenis['nama_jenis'] ?></a>
                                     </li>
+=======
+                                <li><a href="#<?php echo $jenis['nama_jenis']; ?>"
+                                        class="link-category"><?php echo $jenis['nama_jenis'] ?></a>
+                                    <button>
+                                        <i class="bi bi-x"></i>
+                                    </button>
+                                </li>
+>>>>>>> 3f29dd684721b3a9901608ac0d1665438d737009
                                 <?php } ?>
                             </ul>
                         </div>
@@ -113,12 +147,21 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
 
                         while ($jenis_product = mysqli_fetch_array($query)) {
                         ?>
+<<<<<<< HEAD
                             <ul id="<?php echo $jenis_product['id_jenis'] ?>">
                                 <?php echo $jenis_product['nama_jenis'] ?>
                                 <li>
                                     asdad
                                 </li>
                             </ul>
+=======
+                        <ul id="<?php echo $jenis_product['id_jenis'] ?>">
+                            <?php echo $jenis_product['nama_jenis'] ?>
+                            <li>
+                                asdad
+                            </li>
+                        </ul>
+>>>>>>> 3f29dd684721b3a9901608ac0d1665438d737009
 
                         <?php } ?>
                         <!---->
@@ -142,6 +185,7 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                         $query_product = mysqli_query($connect, $sql_product) or die(mysqli_error($connect));
                                         while ($list_product = mysqli_fetch_array($query_product)) {
                                         ?>
+<<<<<<< HEAD
                                             <div>
                                                 <img src="gambar-product/<?php echo $list_product['gambar']; ?>">
                                             </div>
@@ -158,6 +202,16 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                                     <a href="delete-product.php?id_product=<?php echo $list_product['id_product']; ?>" class="btn btn-warning">Delete</a>
                                                 </div>
                                             </div>
+=======
+                                        <div>
+                                            <img src="gambar-product/<?php echo $list_product['gambar']; ?>">
+                                        </div>
+                                        <div class="description">
+                                            <h3><?php echo $list_product['nama_product']; ?></h3>
+                                            <h5> <?php echo $list_product['harga']; ?></h5>
+                                            <h5> <?php echo $list_product['jumlah_tersedia']; ?></h5>
+                                        </div>
+>>>>>>> 3f29dd684721b3a9901608ac0d1665438d737009
                                         <?php } ?>
                                     </div>
                                 </div>
