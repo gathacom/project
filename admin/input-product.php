@@ -2,6 +2,7 @@
 include '../koneksi.php';
 $sql = "SELECT * FROM jenis_product";
 $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
+
 ?>
 
 <!DOCTYPE html>
@@ -11,29 +12,28 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Gustoro Coffee Shop</title>
 
     <style>
-    .product img {
-        width: 300px;
-    }
+        .product img {
+            width: 300px;
+        }
 
-    .product .description {
-        margin-left: 20px;
-    }
+        .product .description {
+            margin-left: 20px;
+        }
 
-    .product {
-        padding: 10px;
-        display: flex;
-    }
+        .product {
+            padding: 10px;
+            display: flex;
+        }
 
-    form .input {
-        padding: 10px;
-    }
+        form .input {
+            padding: 10px;
+        }
     </style>
 
 </head>
@@ -42,9 +42,7 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
     <header class="bg-dark py-5">
         <nav class="nav navbar-expand-lg fixed-top p-5   navbar-dark">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle"
-                    aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMiddle" aria-controls="#navbarsMiddle" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -76,8 +74,7 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                 </div>
                 <div class="col-6 col-xl-4 col-xxl-5 text-center">
                     <div class="lottie-product">
-                        <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_fpdvsz3i.json"
-                            background="transparent" style="width:400px;height:400px;" speed="1" loop autoplay>
+                        <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_fpdvsz3i.json" background="transparent" style="width:400px;height:400px;" speed="1" loop autoplay>
                         </lottie-player>
                     </div>
                 </div>
@@ -99,9 +96,8 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                 <?php
                                 while ($jenis = mysqli_fetch_array($query)) {
                                 ?>
-                                <li><a
-                                        href="#<?php echo $jenis['nama_jenis']; ?>"><?php echo $jenis['nama_jenis'] ?></a>
-                                </li>
+                                    <li><a href="#<?php echo $jenis['nama_jenis']; ?>"><?php echo $jenis['nama_jenis'] ?></a>
+                                    </li>
                                 <?php } ?>
                             </ul>
                         </div>
@@ -114,10 +110,10 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                 Product</a>
                         </div>
                         <?php
-                            
-                            while($jenis_product = mysqli_fetch_array($query)){
+
+                        while ($jenis_product = mysqli_fetch_array($query)) {
                         ?>
-                            <ul id="<?php echo $jenis_product['id_jenis']?>">
+                            <ul id="<?php echo $jenis_product['id_jenis'] ?>">
                                 <?php echo $jenis_product['nama_jenis'] ?>
                                 <li>
                                     asdad
@@ -129,6 +125,17 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                         <ul>
                             <li>
                                 <div class="product">
+                                    <div>
+                                        <?php
+                                        if (isset($_GET['message'])) {
+                                            if ($_GET['message'] == "gagal-delete") {
+                                                echo "Product gagal dihapus";
+                                            } else if ($_GET['message'] =="berhasil-delete"){
+                                                echo "Product berhasil dihapus";
+                                            }
+                                        }
+                                        ?>
+                                    </div>
                                     <div id="">
                                         <?php
                                         $sql_product = "SELECT * FROM product";
@@ -142,6 +149,14 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                                 <h3><?php echo $list_product['nama_product']; ?></h3>
                                                 <h5> <?php echo $list_product['harga']; ?></h5>
                                                 <h5> <?php echo $list_product['jumlah_tersedia']; ?></h5>
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <a href="#?id_product=<?php echo $list_product['id_product']; ?>" class="btn btn-info" data-toggle="modal" data-target="#edit-product">Edit Product</a>
+                                                </div>
+                                                <div>
+                                                    <a href="delete-product.php?id_product=<?php echo $list_product['id_product']; ?>" class="btn btn-warning">Delete</a>
+                                                </div>
                                             </div>
                                         <?php } ?>
                                     </div>
@@ -183,8 +198,8 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                         $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                         while ($jenis = mysqli_fetch_array($query)) {
                                         ?>
-                                        <option value="<?php echo $jenis['id_jenis'] ?>">
-                                            <?php echo $jenis['nama_jenis'] ?></option>
+                                            <option value="<?php echo $jenis['id_jenis'] ?>">
+                                                <?php echo $jenis['nama_jenis'] ?></option>
                                         <?php } ?>
                                     </select>
                                 </div>
@@ -194,8 +209,7 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                 </div>
                                 <div class="input">
                                     <label for="jumlah-product" class="form-label">Jumlah Produk Tersedia</label>
-                                    <input type="number" name="jumlah_tersedia" id="jumlah-product"
-                                        class="form-control">
+                                    <input type="number" name="jumlah_tersedia" id="jumlah-product" class="form-control">
                                 </div>
                             </div>
                             <div class="input">
@@ -238,12 +252,10 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
 
 
 
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
 </body>
 
