@@ -55,11 +55,9 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
         <div class="container px-2">
             <div class="row gx-3 d-flex align-items-start justify-content-center">
                 <div class=" d-flex align-items-center flex-column justify-content-center">
-                    <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_fpdvsz3i.json"
-                        background="transparent" speed="1.5" style="width: 300px; height: 300px;" loop autoplay>
+                    <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_fpdvsz3i.json" background="transparent" speed="1.5" style="width: 300px; height: 300px;" loop autoplay>
                     </lottie-player>
-                    <div
-                        class="text-warning text-center text-xl-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="text-warning text-center text-xl-center d-flex flex-column align-items-center justify-content-center">
                         <h1 class="display-2 fw-bolder mb-1 ">EDIT PRODUCT</h1>
                         <h5 class="lead fw-normal mb-3">Selamat Bekerja para Admin</h5>
                     </div>
@@ -72,99 +70,80 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
     </section>
 
 
-    <section class="bg-light">
-        <div class="">
-            <div class="row">
-                <div class="col-md-3 container-category">
-                    <div class="container mx-1 category">
-                        <h2 class="mb-2">Categories</h2>
-                        <div data-toggle="modal" data-target="#tambah-kategori" class="p-3">
-                            <a href="#" class="btn btn-dark">Tambah Kategori</a>
-                        </div>
-                        <div class="text-white">
-                            <ul>
-                                <?php
-                                while ($jenis = mysqli_fetch_array($query)) {
-                                ?>
-                                <li><a href="#<?php echo $jenis['nama_jenis']; ?>"
-                                        class="link-category"><?php echo $jenis['nama_jenis'] ?></a>
-                                    <button>
-                                        <i class="bi bi-x"></i>
-                                    </button>
+    <section class="section2">
+        <div class="row">
+            <div class="col-3 container-list">
+                <div class="mx-1 category">
+                    <h2 class="mb-2">Categories</h2>
+                    <div data-toggle="modal" data-target="#tambah-kategori" class="p-3">
+                        <a href="#" class="btn btn-dark">Tambah Kategori</a>
+                    </div>
+                    <div class="edit-category">
+                        <ul>
+                            <?php
+                            while ($jenis = mysqli_fetch_array($query)) {
+                            ?>
+                                <li>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="#<?php echo $jenis['nama_jenis']; ?>"><?php echo $jenis['nama_jenis'] ?></a>
+                                        <a href="delete-category.php?id_jenis=<?php echo $jenis['id_jenis']; ?>" style="color:black; margin-left:30px;">x</a>
+                                    </div>
                                 </li>
-                                <?php } ?>
-                            </ul>
-                        </div>
+                            <?php } ?>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-9 container-product bg-light">
-                    <div>
-                        <div class="mb-5 text-center">
-                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#tambah-product">Tambah
-                                Product</a>
-                        </div>
-                        <?php
+            </div>
 
-                        while ($jenis_product = mysqli_fetch_array($query)) {
-                        ?>
-                            <ul id="<?php echo $jenis_product['id_jenis'] ?>">
-                                <?php echo $jenis_product['nama_jenis'] ?>
-                                <li>
-                                    asdad
-                                </li>
-                            </ul>
-                        <ul id="<?php echo $jenis_product['id_jenis'] ?>">
-                            <?php echo $jenis_product['nama_jenis'] ?>
-                            <li>
-                                asdad
-                            </li>
-                        </ul>
 
-                        <?php } ?>
-                        <!---->
-                        <ul>
-                            <li>
+            <div class="col-md-9 container-product bg-light">
+                <div class="mb-5 mt-5 text-center">
+                    <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#tambah-product">Tambah
+                        Product</a>
+                </div>                
+                <div>
+                    <?php
+                    if (isset($_GET['message'])) {
+                        if ($_GET['message'] == "gagal-delete") {
+                            echo "Prroses hapus gagal";
+                        } else if ($_GET['message'] == "berhasil-delete") {
+                            echo "Proses hapus berhasil";
+                        }
+                    }
+                    ?>
+                </div>
+                <ul>
+                    <li>
+                        <div class="product">
+                            <?php
+                            $sql_product = "SELECT * FROM product";
+                            $query_product = mysqli_query($connect, $sql_product) or die(mysqli_error($connect));
+                            while ($list_product = mysqli_fetch_array($query_product)) {
+                            ?>
                                 <div class="product">
-                                    <div>
-                                        <?php
-                                        if (isset($_GET['message'])) {
-                                            if ($_GET['message'] == "gagal-delete") {
-                                                echo "Product gagal dihapus";
-                                            } else if ($_GET['message'] =="berhasil-delete"){
-                                                echo "Product berhasil dihapus";
-                                            }
-                                        }
-                                        ?>
+                                    <div class="container-image">
+                                        <img src="gambar-product/<?php echo $list_product['gambar']; ?>">
                                     </div>
-                                    <div id="">
-                                        <?php
-                                        $sql_product = "SELECT * FROM product";
-                                        $query_product = mysqli_query($connect, $sql_product) or die(mysqli_error($connect));
-                                        while ($list_product = mysqli_fetch_array($query_product)) {
-                                        ?>
-                                            <div>
-                                                <img src="gambar-product/<?php echo $list_product['gambar']; ?>">
-                                            </div>
-                                            <div class="description">
-                                                <h3><?php echo $list_product['nama_product']; ?></h3>
-                                                <h5> <?php echo $list_product['harga']; ?></h5>
-                                                <h5> <?php echo $list_product['jumlah_tersedia']; ?></h5>
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <a href="edit-product.php?id_product=<?php echo $list_product['id_product']; ?>" class="btn btn-info">Edit Product</a>
-                                                </div>
-                                                <div>
-                                                    <a href="delete-product.php?id_product=<?php echo $list_product['id_product']; ?>" class="btn btn-warning">Delete</a>
-                                                </div>
-                                            </div>
-                                        <?php } ?>
+                                    <div class="description">
+                                        <h3><?php echo $list_product['nama_product']; ?></h3>
+                                        <h5> <?php echo $list_product['harga']; ?></h5>
+                                        <h5> <?php echo $list_product['jumlah_tersedia']; ?></h5>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <a href="#?id_product=<?php echo $list_product['id_product']; ?>" class="btn btn-info" data-toggle="modal" data-target="#edit-product">Edit
+                                                Product</a>
+                                        </div>
+                                        <div>
+                                            <a href="delete-product.php?id_product=<?php echo $list_product['id_product']; ?>" class="btn btn-warning">Delete</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                            <?php } ?>
+
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
