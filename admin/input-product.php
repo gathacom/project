@@ -38,7 +38,6 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
 
 </head>
 
-<<<<<<< HEAD
 <body class="home-bg">
     <header class="bg-dark py-5">
         <nav class="nav navbar-expand-lg fixed-top p-5   navbar-dark">
@@ -63,7 +62,6 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                         </li>
                     </ul>
                 </div>
-=======
 <body>
     <nav class="nav nav-bg navbar-expand-lg fixed-top navbar-dark p-3">
         <div class="container-fluid">
@@ -74,7 +72,7 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                         <a href="homepage-admin.php" class="nav-link" aria-current="page">HOME</a>
                     </li>
                 </ul>
->>>>>>> 3f29dd684721b3a9901608ac0d1665438d737009
+
             </div>
         </div>
     </nav>
@@ -149,7 +147,6 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                             </li>
                             <?php } ?>
                         </ul>
->>>>>>> Stashed changes
                     </div>
                 </div>
                 <div class="col-md-9 container-product bg-light">
