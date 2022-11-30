@@ -113,7 +113,12 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                     asdad
                                 </li>
                             </ul>
-                        
+                        <ul id="<?php echo $jenis_product['id_jenis'] ?>">
+                            <?php echo $jenis_product['nama_jenis'] ?>
+                            <li>
+                                asdad
+                            </li>
+                        </ul>
 
                         <?php } ?>
                         <!---->
@@ -147,7 +152,7 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                             </div>
                                             <div>
                                                 <div>
-                                                    <a href="#?id_product=<?php echo $list_product['id_product']; ?>" class="btn btn-info" data-toggle="modal" data-target="#edit-product">Edit Product</a>
+                                                    <a href="edit-product.php?id_product=<?php echo $list_product['id_product']; ?>" class="btn btn-info">Edit Product</a>
                                                 </div>
                                                 <div>
                                                     <a href="delete-product.php?id_product=<?php echo $list_product['id_product']; ?>" class="btn btn-warning">Delete</a>
