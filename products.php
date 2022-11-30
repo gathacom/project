@@ -116,6 +116,8 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                     <h3>NAMA : <?php echo $list_product['nama_product']; ?></h3>
                                     <h5>HARGA : <?php echo $list_product['harga']; ?></h5>
                                     <h5>Jumlah Tersedia : <?php echo $list_product['jumlah_tersedia']; ?></h5>
+                                    <a href="p-order.php=<?php echo $list_product['id_product']; ?>"
+                                        class="btn btn-info">Order</a>
                                 </div>
                             </div>
                         </li>
