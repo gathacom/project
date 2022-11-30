@@ -1,5 +1,5 @@
 <?php
-    include 'koneksi.php';
+$value = $_GET['value'];
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +47,7 @@
                             <input type="submit" id="submit" value="Sign Up" />
                             <div class="register">
                                 Dah Punya Akun? <br>
-                                <a href="login.php">Login di sini</a>
+                                <a href="login.php?value=<?= $value ?>">Login di sini</a>
                             </div>
                         </div>
                     </form>

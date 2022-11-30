@@ -44,7 +44,7 @@ if (isset($_GET['message'])) {
                     <h6 class="text-center text-white small"><?= $alert ?></h6>
                     <form method="post" action="p-login.php?value=<?php echo $value ?>">
                         <div class="user-box">
-                            <input type="text" required="required" name="username" required="required" />
+                            <input type="text" name="username" />
                             <label for="username">Username</label>
                         </div>
                         <div class="user-box">
