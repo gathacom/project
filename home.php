@@ -4,8 +4,8 @@ if (empty($_SESSION['username'])) {
     $url = "login.php?value=1";
     $url2 = "login.php?value=2";
 } else {
-    $url = "order.php";
-    $url2 = "reservasi.php";
+    $url = "order.php?value=0";
+    $url2 = "reservasi.php?value=0";
 } ?>
 
 

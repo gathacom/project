@@ -1,8 +1,23 @@
 <?php
-include 'koneksi.php';
-
 $value = $_GET['value'];
+if (isset($_GET['message'])) {
+    if ($_GET['message'] == "gagal") {
+        $alert = "Username atau password salah.";
+    } elseif ($_GET['message'] == "logout") {
+        $alert = "Anda telah berhasil logout.";
+    } elseif ($_GET['message'] == "belum_login") {
+        $alert = "Anda harus login terlebih dahulu untuk mengakses halaman.";
+    } elseif ($_GET['message'] == "Registrasi Berhasil") {
+        $alert = "Silahkan Login";
+    }
+} else {
+    $alert = " ";
+}
+
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,32 +39,23 @@ $value = $_GET['value'];
     <section class="py-5 position-relative" id="section1">
         <div class="gx-3 d-flex align-items-center justify-content-center">
             <div class="col-6 col-lg-5 col-xl-5 col-xxl-4">
-                <div class="register-box">
-                    <h2>REGISTER</h2>
-                    <form method="post" action="p-register.php?value=<?= $value ?>">
+                <div class="login-box">
+                    <h2>LOGIN</h2>
+                    <h6 class="text-center text-white small"><?= $alert ?></h6>
+                    <form method="post" action="p-login.php?value=<?php echo $value ?>">
                         <div class="user-box">
-                            <input type="text" name="name" required="required" />
-                            <label for="name">Nama</label>
-                        </div>
-                        <div class="d-flex flex-row justify-content-between ">
-                            <div class="user-box">
-                                <input type="text" class="username" name="username" required="required" />
-                                <label for="username">Username</label>
-                            </div>
-                            <div class="user-box ml-3">
-                                <input type="password" name="password" required="required" />
-                                <label for="password">Password</label>
-                            </div>
+                            <input type="text" required="required" name="username" required="required" />
+                            <label for="username">Username</label>
                         </div>
                         <div class="user-box">
-                            <input type="tel" name="tel" required="required" />
-                            <label for="tel">No. Telepon</label>
+                            <input type="password" required="required" name="password" required="required" />
+                            <label for="password">Password</label>
                         </div>
-                        <div class="btn-form ">
-                            <input type="submit" id="submit" value="Sign Up" />
+                        <div class="btn-form">
+                            <input type="submit" id="submit" value="LOGIN" />
                             <div class="register">
-                                Dah Punya Akun? <br>
-                                <a href="login.php">Login di sini</a>
+                                Ga Punya Akun? <br>
+                                <a href="register.php?value=<?php echo $value; ?>">Daftar di sini</a>
                             </div>
                         </div>
                     </form>
