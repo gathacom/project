@@ -22,7 +22,8 @@ include 'sessions.php';
 
     <nav class="nav nav-bg navbar-expand-lg fixed-top navbar-dark p-3">
         <div class="container-fluid">
-            <a href="logout.php" class="btn-logout position-absolute"> <button class="btn-danger">Logout</button></a>
+            <a href="logout.php/value=0" class="btn-logout position-absolute"> <button
+                    class="btn-danger">Logout</button></a>
             <div class="collapse navbar-collapse justify-content-md-center" id="navbarsMiddle">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">

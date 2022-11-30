@@ -116,6 +116,7 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                         <div data-toggle="modal" data-target="#tambah-kategori" class="p-3">
                             <a href="#" class="btn btn-dark">Tambah Kategori</a>
                         </div>
+<<<<<<< Updated upstream
                         <div class="text-white">
                             <ul>
                                 <?php
@@ -135,6 +136,20 @@ $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
                                 <?php } ?>
                             </ul>
                         </div>
+=======
+                        <ul>
+                            <?php
+                            while ($jenis = mysqli_fetch_array($query)) {
+                            ?>
+                            <li><a href="#<?php echo $jenis['nama_jenis']; ?>"
+                                    class="link-category"><?php echo $jenis['nama_jenis'] ?></a>
+                                <button>
+                                    <i class="bi bi-x "></i>
+                                </button>
+                            </li>
+                            <?php } ?>
+                        </ul>
+>>>>>>> Stashed changes
                     </div>
                 </div>
                 <div class="col-md-9 container-product bg-light">

@@ -4,6 +4,12 @@ session_start();
 if (empty($_SESSION['username'])) {
     $url3 = "login.php?value=3";
 }
+
+
+include 'koneksi.php';
+$sql = "SELECT * FROM jenis_product";
+$query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
+
 ?>
 
 
@@ -83,9 +89,16 @@ if (empty($_SESSION['username'])) {
                 <div class="container mx-1 category">
                     <h2 class="mb-3">Categories</h2>
                     <ul>
-                        <li><a href="#list-coffee">Coffee</a></li>
-                        <li><a href="#list-tea">Tea</a></li>
-                        <li><a href="#list-food">Food</a></li>
+                        <?php
+                        while ($jenis = mysqli_fetch_array($query)) {
+                        ?>
+                        <li><a href="#<?php echo $jenis['nama_jenis']; ?>"
+                                class="link-category"><?php echo $jenis['nama_jenis'] ?></a>
+                            <button>
+                                <i class="bi bi-x"></i>
+                            </button>
+                        </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
