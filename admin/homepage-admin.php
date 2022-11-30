@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (empty($_SESSION['username'])) {
-    header("location: login.php?belum_login");
+    header("location: ../login.php?message=belum_login&value=4");
 } ?>
 
 
@@ -36,6 +36,8 @@ if (empty($_SESSION['username'])) {
                         <h5 class="lead fw-normal mb-4">Selamat datang <?= $_SESSION["username"] ?></h5>
                     </div>
                     <a class="btn" href="input-product.php"> <button class="button-profile">Edit Produk
+                        </button></a>
+                    <a class="btn" href="../home.php"> <button class="button-profile">User Page
                         </button></a>
                 </div>
                 <div class="col-6 col-xl-4 col-xxl-5 text-center">

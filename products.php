@@ -4,6 +4,10 @@ session_start();
 if (empty($_SESSION['username'])) {
     $url3 = "login.php?value=3";
 }
+
+include 'koneksi.php';
+$sql = "SELECT * FROM jenis_product";
+$query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
 ?>
 
 
@@ -83,62 +87,43 @@ if (empty($_SESSION['username'])) {
                 <div class="container mx-1 category">
                     <h2 class="mb-3">Categories</h2>
                     <ul>
-                        <li><a href="#list-coffee">Coffee</a></li>
-                        <li><a href="#list-tea">Tea</a></li>
-                        <li><a href="#list-food">Food</a></li>
+                        <?php
+                        while ($jenis = mysqli_fetch_array($query)) {
+                        ?>
+                        <li><a href="#<?php echo $jenis['id_jenis']; ?>"
+                                class="link-category"><?php echo $jenis['nama_jenis'] ?></a>
+                        </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
             <div class="col-md-9 container-product bg-light">
-                <div id="list-coffee" class="pt-5">
-                    <ul>
-                        while(){
-                        <li>
-                            <div class="product">
-                                <div class="container-image  img-hover-zoom--blur">
-                                    <img src="assets/product-1.png" alt="" />
-                                </div>
-                                <div class="description">
-                                    <h3>Biji Kopi House Blend ETC 50% Robusta 50% Arabica</h3>
-                                    <h5>Rp50.000 - Rp100.000</h5>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div id="list-tea" class="pt-5 ">
-                    <ul>
-                        while(){
-                        <li>
-                            <div class="product">
-                                <div class="container-image img-hover-zoom--blur">
-                                    <img src="assets/product-1.png" alt="" />
-                                </div>
-                                <div class="description">
-                                    <h3>Biji Kopi House Blend ETC 50% Robusta 50% Arabica</h3>
-                                    <h5>Rp50.000 - Rp100.000</h5>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div id="list-food" class="pt-5">
-                    <ul>
-                        while(){
-                        <li>
-                            <div class="product img-hover-zoom--blur">
-                                <div class="container-image  img-hover-zoom--blur">
-                                    <img src="assets/product-1.png" alt="" />
-                                </div>
-                                <div class="description">
-                                    <h3>Biji Kopi House Blend ETC 50% Robusta 50% Arabica</h3>
-                                    <h5>Rp50.000 - Rp100.000</h5>
-                                </div>
-                            </div>
 
+                <?php
+                $sql_product = "SELECT * FROM product";
+                $query_product = mysqli_query($connect, $sql_product) or die(mysqli_error($connect));
+                while ($list_product = mysqli_fetch_array($query_product)) {
+                ?>
+
+                <div id="<?php echo $jenis['id_jenis']; ?>" class="pt-5">
+                    <ul>
+                        <li>
+                            <div class="product">
+                                <div class="container-image  img-hover-zoom--blur">
+                                    <img src="gambar-product/<?php echo $list_product['gambar']; ?>">
+                                </div>
+                                <div class="description">
+                                    <h3>NAMA : <?php echo $list_product['nama_product']; ?></h3>
+                                    <h5>HARGA : <?php echo $list_product['harga']; ?></h5>
+                                    <h5>Jumlah Tersedia : <?php echo $list_product['jumlah_tersedia']; ?></h5>
+                                    <a href="p-order.php?id=<?php echo $list_product['id_product']; ?>"
+                                        class="btn btn-info">Order</a>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
+                <?php } ?>
             </div>
         </div>
     </section>

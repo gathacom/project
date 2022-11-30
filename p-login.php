@@ -22,7 +22,7 @@ if ($cek > 0) {
         header("location: admin/homepage-admin.php");
     } else if ($role == 'user') {
         if ($value == 0) {
-            header("location: home.php?");
+            header("location: home.php");
         } else if ($value == '1') {
             header("location: order.php");
         } else if ($value == '2') {

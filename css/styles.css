@@ -97,7 +97,7 @@ bg-dark{
     height: 3em;
     line-height: 2em;
     text-align: center;
-    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background: linear-gradient(90deg,rgba(33,37,41,1),#7c8500,#ffeb3b,rgba(255,193,7,1));
     background-size: 300%;
     border-radius: 30px;
     z-index: 1;
@@ -126,7 +126,7 @@ bg-dark{
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: linear-gradient(90deg,#00d0ff,#f441a5,#ffeb3b,#03a9f4);
+    background: linear-gradient(90deg,rgba(33,37,41,1),#7c8500,#ffeb3b,rgba(255,193,7,1));
     background-size: 400%;
     border-radius: 35px;
     transition: 1s;
@@ -137,7 +137,7 @@ bg-dark{
    }
    
    .button-profile:active {
-    background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background: linear-gradient(32deg,rgba(33,37,41,1),#7c8500,#ffeb3b,rgba(255,193,7,1));
    } 
    .custom-shape-divider-top-1669302693 {
     position: absolute;
@@ -173,6 +173,17 @@ bg-dark{
     font-family: "Poppins", sans-serif;
 }
 
+.container-list{
+    padding-left: 2em;
+    position : relative;
+    background-color: #ffc107;
+    padding-right: 1em;
+}
+
+.container-list .edit-category a{
+    color: #000;
+    text-decoration: none;
+}
 .category{
     font-size: 1.1em;
     position: sticky;
@@ -186,6 +197,7 @@ bg-dark{
 }
 
 .container-category{
+    padding-left: 1em;
     position : relative;
     background-color: #ffc107;
 }
@@ -303,7 +315,7 @@ bg-dark{
     font-family: 'Poppins', sans-serif;
 }
 
-.login-box h2, .register-box h2{
+.login-box h2, .register-box h2, .reservasi-box h2{
     margin: 0 0 10px 0;
     padding: 0;
     color: white;
@@ -315,7 +327,8 @@ bg-dark{
     text-decoration: underline red;
 }
 
-.login-box .user-box input, .register-box .user-box input{
+.login-box .user-box input, .register-box .user-box input,
+.reservasi-box .user-box input{
     position: relative;
     width: 100%;
     padding: 5px 0;
@@ -329,7 +342,8 @@ bg-dark{
     background-color: transparent;
 }
 
-.login-box .user-box label, .register-box .user-box label{
+.login-box .user-box label, .register-box .user-box label
+{
     position: relative;
     left: 0;
     top: -60px;
@@ -340,11 +354,25 @@ bg-dark{
     transition: .5s;
 }
 
+.reservasi-box .user-box label{
+    position: relative;
+    left: 0;
+    top: -60px;
+    padding: 8px 0;
+    color: white;
+    pointer-events: none;
+    left: 0;
+    color: aqua;
+    font-size: 12px; 
+}
+
 .login-box .user-box input:focus~label,
 .login-box .user-box input:valid~label, 
 .register-box .user-box input:focus~label,
-.register-box .user-box input:valid~label {
-    top: -85px;
+.register-box .user-box input:valid~label,
+.reservasi-box .user-box input:focus~label,
+.reservasi-box .user-box input:valid~label{
+    top: -65px;
     left: 0;
     color: aqua;
     font-size: 12px; 
@@ -499,8 +527,7 @@ color: #ffffff;
 }
 
 .btn-dark:hover{
-    background-color: transparent;
-    color:black;
+    color:white;
 }
 
 
@@ -525,3 +552,44 @@ color: #ffffff;
     border-radius: 10px;
 }
 /* end */
+
+form .input {
+    padding: 10px;
+}
+
+.bg-reservasi {
+    padding-bottom: calc(10rem - 4.5rem);
+    background: url(../assets/coffee5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+.reservasi-box{
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    width: 400px;
+    padding:40px;
+    transform: translate(-50%, -50%); 
+    background-color: #2a3036;
+    box-shadow: 0 15px 25px black;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.daftar-reservasi{
+    position: absolute;
+    top: 55%;
+    left: 70%;
+    width: 50%;
+    padding:20px;
+    margin-right: 30px;
+    transform: translate(-50%, -50%); 
+    background-color: #2a3036;
+    color : white;
+    box-shadow: 0 15px 25px black;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
