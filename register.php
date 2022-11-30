@@ -1,4 +1,6 @@
 <?php
+include 'koneksi.php';
+
 $value = $_GET['value'];
 ?>
 
@@ -24,7 +26,7 @@ $value = $_GET['value'];
             <div class="col-6 col-lg-5 col-xl-5 col-xxl-4">
                 <div class="register-box">
                     <h2>REGISTER</h2>
-                    <form method="post" action="p-register.php">
+                    <form method="post" action="p-register.php?value=<?= $value ?>">
                         <div class="user-box">
                             <input type="text" name="name" required="required" />
                             <label for="name">Nama</label>
